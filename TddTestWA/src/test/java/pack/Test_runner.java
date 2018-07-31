@@ -5,6 +5,8 @@ import org.testng.annotations.BeforeTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 
@@ -22,7 +24,10 @@ public class Test_runner {
 		
 		 String loc = "/usr/local/bin/geckodriver";
 		  System.setProperty("webdriver.gecko.driver",loc);
-			driver=new FirefoxDriver();
+			FirefoxOptions firefoxOptions = new FirefoxOptions();
+		    firefoxOptions.setCapability("marionette", true);
+		    driver = new FirefoxDriver(firefoxOptions);
+			
 			System.out.println("TDD : Driver loaded---------------------------------------------------");
   }
 
