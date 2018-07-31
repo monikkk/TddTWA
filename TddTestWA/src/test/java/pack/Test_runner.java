@@ -20,7 +20,7 @@ public class Test_runner {
   public void beforeTest() {
 	 
 		
-		 String loc = "c:\\gecko\\geckodriver.exe";
+		 String loc = "/usr/local/bin/geckodriver.exe";
 		  System.setProperty("webdriver.gecko.driver",loc);
 			driver=new FirefoxDriver();
 			System.out.println("TDD : Driver loaded---------------------------------------------------");
